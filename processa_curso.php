@@ -9,4 +9,5 @@ $query = "INSERT INTO CURSOS(nome_curso, carga_horaria) VALUES('$nome_curso', $c
 
 mysqli_query($conexao, $query);
 
+# Redireciona para a página de cursos.
 header('location:index.php?pagina=cursos');
