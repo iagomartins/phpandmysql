@@ -18,6 +18,10 @@
 				<a href="?pagina=cursos">Cursos</a>
 				<a href="?pagina=alunos">Alunos</a>
 				<a href="?pagina=matriculas">Matrículas</a>
+				<?php if(isset($_SESSION['login'])) { ?>
+					<span class="text-white">Olá, <?= $_SESSION['usuario']?></span>
+					<a href="logout.php">Logout</a>
+				<?php } ?>
 			</div>
 		</div>
 	</header>

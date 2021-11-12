@@ -1,5 +1,6 @@
 <?php
-
+# Iniciar sessão
+session_start();
 # Base de dados
 include 'db.php';
 
@@ -7,10 +8,16 @@ include 'db.php';
 include 'header.php';
 
 # Conteúdo da página
-if(isset($_GET['pagina'])){
-	$pagina = $_GET['pagina'];
+
+if(isset($_SESSION['login'])) {
+	if(isset($_GET['pagina'])){
+		$pagina = $_GET['pagina'];
+	}
+	else{
+		$pagina = 'home';
+	}
 }
-else{
+else {
 	$pagina = 'home';
 }
 
